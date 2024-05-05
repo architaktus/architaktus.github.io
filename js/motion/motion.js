@@ -105,7 +105,7 @@ NexT.motion.middleWares = {
         deltaT  : '-=100'
       });
       animate(coll_header, targets.querySelectorAll('.collection-header'));
-      animate(post_header, targets.querySelectorAll('.post-header'));
+      animate(post_header, targets.querySelectorAll('.post__header'));
       animate(post_body, targets.querySelectorAll('.post-body'));
     });
 

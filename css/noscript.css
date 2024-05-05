@@ -50,7 +50,7 @@ body {
 .use-motion .post-block,
 .use-motion .pagination,
 .use-motion .comments,
-.use-motion .post-header,
+.use-motion .post__header,
 .use-motion .post-body,
 .use-motion .collection-header {
   visibility: visible;
