@@ -1404,7 +1404,7 @@ pre code {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 .post__cover .background img {
@@ -3204,7 +3204,7 @@ mark.search-keyword {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #d90ef9;
+  background: #c1ffaf;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
