@@ -3343,7 +3343,7 @@ mark.search-keyword {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #ffde32;
+  background: #db54ee;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
