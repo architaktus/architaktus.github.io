@@ -1184,9 +1184,20 @@ pre code {
 }
 .site-logo .icon-logo {
   display: flex;
+  width: 45%;
+  height: 45%;
+}
+.site-logo .icon-logo img {
+  opacity: 40%;
+}
+.site-logo:hover img {
+  opacity: 100%;
 }
 .site-logo i {
   margin: 20px auto;
+}
+.sidebar-active .site-logo img {
+  opacity: 100%;
 }
 .sidebar-toggle {
   line-height: 0;
@@ -2353,25 +2364,33 @@ header.header {
   height: 100%;
 /*z-index: $zindex-0;*/
 }
+.home .main-inner {
+  padding: 0;
+}
 .homepage-block {
   padding: var(--outer-gutter);
 }
 .homepage__cover-wrapper {
   display: flex;
-  margin-top: 10vh;
-  margin-left: calc(-1 * var(--outer-gutter));
-  margin-right: calc(-1 * var(--outer-gutter));
+  padding-top: 12vw;
+}
+@media (min-width: 1600px) {
+  .homepage__cover-wrapper {
+    padding-top: 10vw;
+  }
 }
 .homepage__cover {
   width: 100vw;
 }
 @media (min-width: 768px) {
   .homepage__cover {
-    border: 16px solid #fff;
     border-bottom: 0;
   }
 }
 .homepage-title {
+  position: absolute;
+  top: 8vw;
+  left: 3vw;
   font-family: Eksell, serif;
   font-size: 40px;
   line-height: 1;
@@ -2380,9 +2399,6 @@ header.header {
   margin-bottom: 20px;
   -webkit-transition: text-shadow 0.3s;
   transition: text-shadow 0.3s;
-  position: absolute;
-  top: 2vh;
-  left: 3vw;
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .homepage-title {
@@ -2406,17 +2422,140 @@ header.header {
     letter-spacing: -0.02em;
   }
 }
+@media (min-width: 1600px) {
+  .homepage-title {
+    top: 6vw;
+  }
+}
 .homepage-map.icon {
   display: flex;
   position: relative;
+/*#icon-film {
+    top: 29.5vw;
+    left: 78.5vw;
+    .title {
+      top: 4.5vw;
+      left: .5vw;
+      }
+    }*/
 }
 .homepage-map.icon .icon-wrapper {
-  position: relative;
+  position: absolute;
   width: 5vw;
   height: 5vw;
 }
-.homepage-map.icon .icon-wrapper .icon:hover {
+.homepage-map.icon .icon-wrapper:hover .icon {
   animation: shakeit 0.5s 1;
+}
+.homepage-map.icon .icon-wrapper:hover .title {
+  color: var(--link-color);
+  background: #fff;
+}
+.homepage-map.icon .icon-wrapper .icon {
+  position: absolute;
+  z-index: 7;
+}
+.homepage-map.icon .icon-wrapper .title {
+  position: absolute;
+  font-size: 1vw;
+  width: max-content;
+  line-height: 1;
+  top: 4vw;
+  left: -0.5vw;
+  font-size: 1.2vw;
+  padding: 2px;
+  background: rgba(255,255,255,0);
+  color: rgba(255,255,255,0);
+}
+.homepage-map.icon .icon-wrapper .title.board {
+  z-index: 6;
+  top: 4vw;
+  left: 2vw;
+  font-size: 1.5vw;
+  padding: 4px;
+  color: #fff;
+  background: #ff8989;
+}
+.homepage-map.icon #icon-board-1 {
+  top: 25vw;
+  left: 12vw;
+}
+.homepage-map.icon #icon-board-2 {
+  top: 8vw;
+  left: 31vw;
+  rotate: -10deg;
+}
+.homepage-map.icon #icon-board-3 {
+  top: 13.5vw;
+  left: 92vw;
+}
+.homepage-map.icon #icon-board-3 .title {
+  left: -8.5vw;
+}
+.homepage-map.icon #icon-factory {
+  top: 34vw;
+  left: 18vw;
+}
+.homepage-map.icon #icon-house-1 {
+  top: 18vw;
+  left: 47vw;
+  width: 3vw;
+}
+.homepage-map.icon #icon-house-1 .title {
+  top: 4.5vw;
+  left: -1.5vw;
+}
+.homepage-map.icon #icon-house-2 {
+  top: 23vw;
+  left: 40vw;
+}
+.homepage-map.icon #icon-house-2 .title {
+  top: 5vw;
+}
+.homepage-map.icon #icon-boat {
+  top: 35vw;
+  left: 48vw;
+  width: 6vw;
+}
+.homepage-map.icon #icon-boat .title {
+  top: -2vw;
+  left: 0.5vw;
+  rotate: -9deg;
+}
+.homepage-map.icon #icon-camera {
+  top: 21vw;
+  left: 83vw;
+  width: 4vw;
+}
+.homepage-map.icon #icon-camera .title {
+  top: 3.5vw;
+  left: 0;
+}
+.homepage-map.icon #icon-film {
+  top: 27vw;
+  left: 60vw;
+}
+.homepage-map.icon #icon-film .title {
+  top: 4.5vw;
+  left: 0.5vw;
+}
+.homepage-map.icon #icon-stone-head {
+  top: 25vw;
+  left: 88vw;
+  width: 4vw;
+}
+.homepage-map.icon #icon-stone-head .title {
+  top: 7vw;
+  left: 1vw;
+}
+.homepage-map.icon #icon-tree {
+  top: 4vw;
+  left: 61vw;
+  width: 4vw;
+}
+.homepage-map.icon #icon-tree .title {
+  top: 8vw;
+  left: 0;
 }
 .homepage__wrapper .footer {
   margin-top: -40px;
@@ -3204,7 +3343,7 @@ mark.search-keyword {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #c1ffaf;
+  background: #ffde32;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
