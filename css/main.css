@@ -1184,7 +1184,7 @@ mark.search-keyword {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #529eb1;
+  background: #ff39ff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -1785,7 +1785,7 @@ mark.search-keyword {
 .post__card:hover .post__title {
   color: #ff8989;
 }
-.post__meta {
+.post__card .post__meta {
   display: flex;
   position: relative;
   line-height: 1.2;
@@ -1793,20 +1793,20 @@ mark.search-keyword {
   text-transform: uppercase;
   color: #000;
 }
-.post__meta .meta-item {
+.post__card .post__meta .meta-item {
   margin-right: 5px;
 }
-.post__meta .meta-item.dateCreated {
+.post__card .post__meta .meta-item.dateCreated {
   color: #ff8989;
 }
-.post__meta .meta-item.post-tag span {
+.post__card .post__meta .meta-item.post-tag span {
   margin-right: 1px;
 }
-.post__meta.front {
+.post__card .post__meta.front {
   font-weight: bold;
   margin-bottom: 15px;
 }
-.post__title {
+.post__card .post__title {
   margin-bottom: 10px;
   margin-left: -3.2px;
   line-height: 1;
@@ -1816,36 +1816,36 @@ mark.search-keyword {
   font-size: 24px;
 }
 @media (min-width: 1200px) {
-  .post__title {
+  .post__card .post__title {
     font-size: 30px;
   }
 }
-.post__abstract {
+.post__card .post__abstract {
   line-height: 1.3;
   font-size: 14px;
   color: #666;
   padding-bottom: 20px;
 }
-.post__meta.second {
+.post__card .post__meta.second {
   margin-bottom: 5px;
   color: #bbb;
   height: 100%;
 }
-.card__media .media {
+.post__card .card__media .media {
   position: relative;
   z-index: $z-index-0;
   margin: 0 -8vw -30px;
 }
-.card__media .media::before {
+.post__card .card__media .media::before {
   content: '';
   display: block;
   padding-bottom: 67.69723%;
 }
-.card__media .mask {
+.post__card .card__media .mask {
   -webkit-mask-size: cover;
   -webkit-mask-repeat: no-repeat;
 }
-.card__media img {
+.post__card .card__media img {
   position: absolute;
   top: 0;
   left: 0;
@@ -2645,7 +2645,8 @@ ul.breadcrumb li:last-child {
 }
 .post__cover .post__title {
   margin: 0;
-  font-size: 5vh;
+  font-size: 5vw;
+  color: #fff;
 }
 article.post-content {
   margin: 80px auto;
