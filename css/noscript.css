@@ -13,33 +13,38 @@
   --post-body-container-width: 100%;
   --window-height: 100vh;
   --window-width-offset: 0px;
+tablet-desktop()
+desktop()
+desktop-large()
 }
-@media (min-width: 760px) {
-  :root {
-    --container-width: 560px;
-    --gutter: 40px;
-    --navigation-height: 60px;
-    --navigation-width: 60px;
-    --outer-gutter: 60px;
-    --post-body-container-width: 560px;
-  }
-}
-@media (min-width: 960px) {
-  :root {
-    --container-width: 640px;
-    --gutter: 40px;
-    --navigation-height: 80px;
-    --navigation-width: 80px;
-    --outer-gutter: 80px;
-    --post-body-container-width: 640px;
-  }
-}
-@media (min-width: 1280px) {
-  :root {
-    --container-width: 960px;
-    --element-margin: 55px;
-    --paragraph-margin: 55px;
-  }
+:root {
+  --body-bg-color: #fff;
+  --content-bg-color: #fff;
+  --card-bg-color: #f5f5f5;
+  --text-color: #555;
+  --blockquote-color: #666;
+  --link-color: #555;
+  --link-hover-color: #222;
+  --brand-color: #fff;
+  --brand-hover-color: #fff;
+  --table-row-odd-bg-color: #f9f9f9;
+  --table-row-hover-bg-color: #f5f5f5;
+  --menu-item-bg-color: #f5f5f5;
+  --theme-color: #222;
+  --btn-default-bg: #222;
+  --btn-default-color: #fff;
+  --btn-default-border-color: #222;
+  --btn-default-hover-bg: #fff;
+  --btn-default-hover-color: #222;
+  --btn-default-hover-border-color: #222;
+  --highlight-background: #f3f3f3;
+  --highlight-foreground: #444;
+  --highlight-gutter-background: #e1e1e1;
+  --highlight-gutter-foreground: #555;
+  --nav-menu-color: #ddd;
+  --scheme-color-a: #af4c4c;
+  --scheme-color-c: #5f9191;
+  color-scheme: light;
 }
 body {
   margin-top: 2rem;
