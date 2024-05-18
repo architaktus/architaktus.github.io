@@ -1,3 +1,9 @@
+/**
+ * 模块NexT的创建
+ */
+
+////使用立即执行函数（IIFE）定义Next
+//window 在浏览器环境中表示当前的浏览器窗口
 if (!window.NexT) window.NexT = {};
 
 (function() {
@@ -6,8 +12,10 @@ if (!window.NexT) window.NexT = {};
   const staticConfig = {};
   let variableConfig = {};
 
+  // parse函数 获取json内容
   const parse = text => JSON.parse(text || '{}');
 
+  //在<head>下<script>的json中寻找class='next-config'和data-name符合条件的JSON 数据。
   const update = name => {
     const targetEle = document.querySelector(`.${className}[data-name="${name}"]`);
     if (!targetEle) return;
@@ -19,6 +27,8 @@ if (!window.NexT) window.NexT = {};
     }
   };
 
+  //读取页面的JSON至staticConfig
+  //main在主页、404、about、categories、tags、archive和post页面 （其余如category、tag是page）
   update('main');
 
   window.CONFIG = new Proxy({}, {

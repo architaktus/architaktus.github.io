@@ -1183,7 +1183,7 @@ mark.search-keyword {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #61440e;
+  background: #42f7aa;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -1505,21 +1505,198 @@ mark.search-keyword {
     margin: -20px;
   }
 }
-.headline-card__text {
+.post__zettel {
+  font-family: Maria, sans-serif;
+}
+.post__zettel.zettel_l,
+.post__zettel.zettel_m,
+.post__zettel.zettel_s {
+  margin: 10px 0 40px;
+}
+.post__zettel.zettel_l .post__link .post__header,
+.post__zettel.zettel_m .post__link .post__header,
+.post__zettel.zettel_s .post__link .post__header {
+  border-bottom: 1px dashed #ccc;
+/*
+        margin: 30px 2px 0;
+        // 2px is equal to half the width of .posts-collapse::before
+        padding-left: 15px;
+        position: relative;
+        */
+/* list的小点
+        &::before {
+        background: $bw-4;
+        border: 1px solid white;
+        left: -6px;
+        position: absolute;
+        top: $font-size-smallest;
+        transition: background $transition-ease;
+        round-icon(6px);
+        }*/
+}
+.post__zettel.zettel_l .post__link .post__header:hover,
+.post__zettel.zettel_m .post__link .post__header:hover,
+.post__zettel.zettel_s .post__link .post__header:hover {
+  border-bottom-color: #666;
+}
+.post__zettel.zettel_l .post__link .post__header:hover::before,
+.post__zettel.zettel_m .post__link .post__header:hover::before,
+.post__zettel.zettel_s .post__link .post__header:hover::before {
+  background: #222;
+}
+.post__zettel.zettel_l .post__link .post__header:hover .zettel__title,
+.post__zettel.zettel_m .post__link .post__header:hover .zettel__title,
+.post__zettel.zettel_s .post__link .post__header:hover .zettel__title {
+  color: #ff8989;
+  transition: color 0.2;
+}
+.post__zettel.zettel_card,
+.post__zettel.zettel_gallery {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: none;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .post__zettel.zettel_card,
+  .post__zettel.zettel_gallery {
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+}
+.post__zettel.zettel_card::before,
+.post__zettel.zettel_gallery::before {
+  content: '';
+  display: block;
+}
+@media (min-width: 992px) {
+  .post__zettel.zettel_card {
+    width: calc((100% - 40px) / 3);
+    margin: 20px;
+    box-shadow: 0 5px 7px rgba(0,0,0,0.25);
+  }
+}
+.post__zettel.zettel_card::before {
+  padding-bottom: 150%;
+}
+.post__zettel.zettel_card:hover,
+.post__zettel.zettel_card:active,
+.post__zettel.zettel_card:focus {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+@media (min-width: 992px) {
+  .post__zettel.zettel_gallery {
+    width: calc((100% - 10px * 2) / 3);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.15);
+  }
+  .post__zettel.zettel_gallery .media {
+    transition: transform 0.3s;
+  }
+  .post__zettel.zettel_gallery img {
+    filter: grayscale(100%);
+  }
+}
+.post__zettel.zettel_gallery::before {
+  padding-bottom: 100%;
+}
+.post__zettel.zettel_gallery:hover,
+.post__zettel.zettel_gallery:active,
+.post__zettel.zettel_gallery:focus {
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+}
+.post__zettel.zettel_gallery:hover .media,
+.post__zettel.zettel_gallery:active .media,
+.post__zettel.zettel_gallery:focus .media {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.post__zettel.zettel_gallery:hover .media img,
+.post__zettel.zettel_gallery:active .media img,
+.post__zettel.zettel_gallery:focus .media img {
+  filter: grayscale(0%);
+}
+.post__zettel.zettel_gallery:hover .zettel__title,
+.post__zettel.zettel_gallery:active .zettel__title,
+.post__zettel.zettel_gallery:focus .zettel__title {
+  z-index: 6;
+  color: #bbb;
+  mix-blend-mode: difference;
+}
+.zettel_card .post__link,
+.zettel_gallery .post__link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 6;
+  border-bottom: 0;
+}
+.zettel_card .zettel__header,
+.zettel_gallery .zettel__header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.zettel__title {
+  margin-bottom: 10px;
+  margin-left: -3.2px;
+  line-height: 1;
+  font-family: Eksell, serif;
+  font-weight: bold;
+  color: #000;
+  font-size: 24px;
+}
+@media (min-width: 1200px) {
+  .zettel__title {
+    font-size: 30px;
+  }
+}
+.zettel__title_wrapper {
   display: flex;
   flex-direction: column;
   position: relative;
   height: 100%;
-  z-index: 6;
+  bottom: 0;
   font-family: Maria, sans-serif;
-  color: #fff;
 }
-.headline-card__text .headline-card__headline {
+.zettel_gallery .zettel__title {
+  margin: auto;
+  width: 80%;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0);
+}
+.zettel_gallery .zettel__title .title {
+  font-family: Maria, sans-serif;
+  margin: 0;
+  line-height: 1;
+}
+.zettel__title .headline-card__headline {
   font-size: 24px;
   line-height: 1;
   text-transform: uppercase;
 }
-.headline-card__text .headline-card__headline strong {
+.zettel__title .headline-card__headline strong {
   -webkit-text-stroke-color: #fff;
   -webkit-text-stroke-width: 1px;
   color: transparent;
@@ -1535,118 +1712,6 @@ mark.search-keyword {
 }
 .headline-oben .headline-card__headline-wrap {
   padding: 20px;
-}
-.post__zettel {
-  font-family: Maria, sans-serif;
-}
-.post__zettel.zettel_l,
-.post__zettel.zettel_m,
-.post__zettel.zettel_s {
-  margin: 10px 0 40px;
-}
-.post__zettel.zettel_l:hover .post__title,
-.post__zettel.zettel_m:hover .post__title,
-.post__zettel.zettel_s:hover .post__title {
-  color: #ff8989;
-  transition: color 0.2s ease-in-out;
-}
-.post__zettel .post__header {
-  border-bottom: 1px dashed #ccc;
-/*
-    margin: 30px 2px 0;
-    // 2px is equal to half the width of .posts-collapse::before
-    padding-left: 15px;
-    position: relative;
-    */
-/* list的小点
-    &::before {
-      background: $bw-4;
-      border: 1px solid white;
-      left: -6px;
-      position: absolute;
-      top: $font-size-smallest;
-      transition: background $transition-ease;
-      round-icon(6px);
-    }*/
-}
-.post__zettel .post__header:hover {
-  border-bottom-color: #666;
-}
-.post__zettel .post__header:hover::before {
-  background: #222;
-}
-.post__zettel.zettel_card {
-  background: none;
-  color: inherit;
-  font: inherit;
-  text-decoration: inherit;
-  border: 0;
-  border-radius: 0;
-  padding: 0;
-  margin: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: relative;
-  display: block;
-  overflow: hidden;
-}
-@media (min-width: 992px) {
-  .post__zettel.zettel_card {
-    width: calc(100% / 3 - 40px);
-    margin: 20px;
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s;
-    box-shadow: 0 5px 7px rgba(0,0,0,0.25);
-  }
-}
-.post__zettel.zettel_card::before {
-  content: '';
-  display: block;
-  padding-bottom: 150%;
-}
-.post__zettel.zettel_card:hover,
-.post__zettel.zettel_card:active,
-.post__zettel.zettel_card:focus {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-}
-.zettel_card .post__link {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 6;
-  border-bottom: 0;
-}
-.zettel_card .post__header {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 5;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.post__zettel .post__title {
-  margin-bottom: 10px;
-  margin-left: -3.2px;
-  line-height: 1;
-  font-family: Eksell, serif;
-  font-weight: bold;
-  color: #000;
-  font-size: 24px;
-}
-@media (min-width: 1200px) {
-  .post__zettel .post__title {
-    font-size: 30px;
-  }
 }
 .post__zettel .post__meta {
   display: flex;
@@ -1682,10 +1747,10 @@ mark.search-keyword {
 }
 .zettel__media .media {
   position: relative;
-  z-index: $z-index-0;
+  z-index: 5;
 }
 .zettel__media img,
-.zettel__media .media video {
+.zettel__media video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1699,17 +1764,36 @@ mark.search-keyword {
   padding-bottom: 67.69723%;
 }
 .zettel_l .zettel__media img,
-.zettel_l .zettel__media .media video {
+.zettel_l .zettel__media video {
   position: absolute;
   top: 0;
   left: 0;
 }
-.zettel_card .zettel__media .media {
+.zettel_card .zettel__media,
+.zettel_gallery .zettel__media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.zettel_card .zettel__media .media,
+.zettel_gallery .zettel__media .media {
   overflow: hidden;
   height: 100%;
   width: 100%;
+/*&::after {
+            background-color: rgba(0,0,0,.4);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: $zindex-0;
+        }*/
 }
-.zettel_card .zettel__media .media::after {
+.degraded::after {
   background-color: rgba(0,0,0,0.4);
   content: '';
   position: absolute;
@@ -1731,6 +1815,10 @@ mark.search-keyword {
   height: var(--navigation-height);
   margin-bottom: -2vw;
   display: grid;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .overview .header .top .title {
   color: #666;
@@ -1742,6 +1830,10 @@ mark.search-keyword {
 }
 .overview .header .main {
   overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .overview .header .main .title {
   color: #000;
@@ -2303,16 +2395,6 @@ ul.breadcrumb li:last-child {
     -webkit-text-stroke-width: 3px;
     color: transparent !important;
   }
-}
-.degraded {
-  background-color: rgba(0,0,0,0.4);
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-/*z-index: $zindex-0;*/
 }
 .posts_zettel_stack .content_block {
   max-width: 560px;
@@ -3435,4 +3517,43 @@ body.home {
 }
 .category-all-page .category-list-child {
   padding-left: 10px;
+}
+.gallery .content_block,
+.sub_gallery {
+  width: 90vw;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .gallery .content_block,
+  .sub_gallery {
+    width: 600px;
+  }
+}
+@media (min-width: 1600px) {
+  .gallery .content_block,
+  .sub_gallery {
+    width: 720px;
+  }
+}
+.gallery .content_block {
+  margin: 5.5vw auto 2.5vw;
+}
+.sub_gallery {
+  margin: 5px 0 30px;
+}
+.gallery__block {
+  display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: normal;
+  gap: 10px;
+}
+.gallery .header .main .title {
+  letter-spacing: 0;
+}
+.sub_gallery {
+  display: none;
+}
+.gallery__modal {
+  display: none;
 }

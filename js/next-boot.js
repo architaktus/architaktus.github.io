@@ -1,5 +1,11 @@
 /* global NexT, CONFIG */
 
+/**
+ * @overview: 子模块NexT.boot的创建和函数定义
+ * 最后将所有函数用于监听器中 document.addEventListener('DOMContentLoaded'...
+ */
+
+//创建子模块
 NexT.boot = {};
 
 NexT.boot.registerEvents = function() {

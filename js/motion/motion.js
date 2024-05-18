@@ -1,7 +1,13 @@
 /* global NexT, CONFIG */
 
+/**
+ * @overview: 子模块NexT.motion的创建和函数定义
+ */
+
+//创建子模块
 NexT.motion = {};
 
+//在子模块上定义函数integrator
 NexT.motion.integrator = {
   queue: [],
   init : function() {
@@ -29,6 +35,7 @@ NexT.motion.integrator = {
   }
 };
 
+//在子模块上定义函数middleWares
 NexT.motion.middleWares = {
   header: function() {
     const sequence = [];

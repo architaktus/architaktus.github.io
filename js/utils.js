@@ -21,6 +21,7 @@ HTMLElement.prototype.wrap = function(wrapper) {
   document.addEventListener('pjax:success', onPageLoaded);
 })();
 
+//创建子模块utils
 NexT.utils = {
 
   registerExtURL: function() {
