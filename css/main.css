@@ -1183,7 +1183,7 @@ mark.search-keyword {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #e4ffc1;
+  background: #8fe520;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -1625,11 +1625,9 @@ mark.search-keyword {
 .post__zettel.zettel_gallery::before {
   padding-bottom: 100%;
 }
-.post__zettel.zettel_gallery:hover .zettel__title,
-.post__zettel.zettel_gallery:active .zettel__title,
-.post__zettel.zettel_gallery:focus .zettel__title {
+.post__zettel.zettel_gallery:hover .zettel__title {
   z-index: 6;
-  color: #bbb;
+  opacity: 100% !important;
   mix-blend-mode: difference;
 }
 .zettel_card .post__link,
@@ -3549,18 +3547,27 @@ body.home {
   margin-left: 1vw;
 }
 @keyframes circle_text_rotate_animation {
-  from {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  85% {
+    transform: rotate(370deg);
+  }
+  95% {
+    transform: rotate(358deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
 @keyframes circle_text_rotate_animation-backward {
-  from {
+  0% {
     transform: rotate(360deg);
   }
-  to {
+  85% {
+    transform: rotate(-2deg);
+  }
+  95% {
     transform: rotate(0deg);
   }
 }
