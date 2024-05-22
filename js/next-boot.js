@@ -40,6 +40,98 @@ NexT.boot.registerEvents = function() {
   window.addEventListener('tabs:click', e => {
     NexT.utils.registerCodeblock(e.target);
   });
+
+  //和
+  /**
+   * gallery modal相关
+   */
+  const galleryModal = document.getElementById('galleryModal');
+  const modalInfo = galleryModal.querySelector('#modalInfo');
+  const modalImg = galleryModal.querySelector('#modalImage');
+  const modalDimmer = galleryModal.querySelector('.modal__dimmer');
+  const closeBtn = document.querySelector('.modal__toolkit .close');
+  const prevBtn = document.querySelector('.modal__toolkit .prev');
+  const nextBtn = document.querySelector('.modal__toolkit .next');
+  const galleryItems = document.querySelectorAll('article.post__zettel');
+  const postImageItems = document.querySelectorAll('.media');//TODO 
+  const linkInfo = modalInfo.querySelector('.link');
+  let currentIndex;
+
+  function openModal(index) {
+    document.body.classList.add('no-scroll'); //禁止滚动
+
+    currentIndex = index;
+    const currentElement = galleryItems[index];
+    const img = currentElement.querySelector('img');
+    const info = currentElement.querySelector('.media')
+    const src = img.getAttribute('src');
+    const alt = img.getAttribute('alt');
+    const title = modalInfo.querySelector('.title');
+    const tags = modalInfo.querySelector('.tags');
+    const location = modalInfo.querySelector('.location');
+    const description = modalInfo.querySelector('.description');
+    
+    modalImg.src = src;
+    modalImg.alt = alt;
+    title.innerText = alt;
+    //tags.innerText = 。。。
+    description.innerText = info.dataset.description;
+    
+    if (info.dataset.url){
+      linkInfo.innerText = "See: "
+      const link = document.createElement('a');
+      link.className = 'post__link';
+      link.href = info.dataset.url;
+      link.itemProp = 'url';
+      link.innerText = info.dataset.title;
+      linkInfo.appendChild(link);
+      linkInfo.style.display = 'block';
+    } else {
+      linkInfo.innerHTML = '';
+    }
+    galleryModal.style.display = 'block';
+  }
+
+  function clearModal() {
+    linkInfo.innerHTML = '';
+  }
+
+  function closeModal() {
+    galleryModal.style.display = 'none';
+    clearModal();
+    document.body.classList.remove('no-scroll');
+  }
+
+  function showPrev() {
+      if (currentIndex > 0) {
+        clearModal()  
+        openModal(currentIndex - 1);
+      } else {
+        //TODO 先黑屏 提示至最后一张
+      }
+  }
+
+  function showNext() {
+      if (currentIndex < galleryItems.length - 1) {
+        clearModal()
+        openModal(currentIndex + 1);
+      } else {
+        //TODO 先黑屏 提示回到第一张
+      }
+  }
+
+  galleryItems.forEach((item, index) => {
+      item.addEventListener('click', () => openModal(index)); 
+      //注意index 不是 data-index 属性的值，而是 galleryItems NodeList 中的当前项的索引
+  });
+  postImageItems.forEach((item, index) => {
+    item.addEventListener('click', () => openModal(index)); 
+  });
+
+  modalDimmer.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  prevBtn.addEventListener('click', showPrev);
+  nextBtn.addEventListener('click', showNext);
 };
 
 NexT.boot.refresh = function() {
