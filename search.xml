@@ -63,6 +63,21 @@
       </tags>
   </entry>
   <entry>
+    <title>古埃及摘抄</title>
+    <url>/geohistory/acient-egypt/</url>
+    <content><![CDATA[<p>testtesttest</p>
+<p>测试<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ancient_Egypt_map-en.svg/800px-Ancient_Egypt_map-en.svg.png" alt="test1"><br><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Vase_with_gazelles-E_28023-_Egypte_louvre_316.jpg" alt="test2"><br>testtesttest分隔分隔</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Tomb_100_Hierakompolis%2C_Naqada_II_culture_%28c._3500-3200_BCE%29.jpg/1280px-Tomb_100_Hierakompolis%2C_Naqada_II_culture_%28c._3500-3200_BCE%29.jpg" alt="test3"><br>再分<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Narmer_Palette.jpg/1280px-Narmer_Palette.jpg" alt="test4"><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/1280px-All_Gizah_Pyramids.jpg" alt="test5"><br>继续分</p>
+<p>分<br><img src="/" alt="test"><br><img src="/" alt="test"><br><img src="/" alt="test"><br><img src="/" alt="test"></p>
+]]></content>
+      <categories>
+        <category>geohistory</category>
+      </categories>
+      <tags>
+        <tag>古埃及</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于沙丘六部曲</title>
     <url>/art/review/Review-Dune-Series/</url>
     <content><![CDATA[<p>下文2021曾发于本人豆瓣，未再整理，草置于此。</p>
@@ -90,21 +105,6 @@
       </tags>
   </entry>
   <entry>
-    <title>古埃及摘抄</title>
-    <url>/geohistory/acient-egypt/</url>
-    <content><![CDATA[<p>testtesttest</p>
-<p>测试<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Ancient_Egypt_map-en.svg/800px-Ancient_Egypt_map-en.svg.png" alt="test1"><br><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Vase_with_gazelles-E_28023-_Egypte_louvre_316.jpg" alt="test2"><br>testtesttest分隔分隔</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Tomb_100_Hierakompolis%2C_Naqada_II_culture_%28c._3500-3200_BCE%29.jpg/1280px-Tomb_100_Hierakompolis%2C_Naqada_II_culture_%28c._3500-3200_BCE%29.jpg" alt="test3"><br>再分<br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Narmer_Palette.jpg/1280px-Narmer_Palette.jpg" alt="test4"><br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/All_Gizah_Pyramids.jpg/1280px-All_Gizah_Pyramids.jpg" alt="test5"><br>继续分</p>
-<p>分<br><img src="/" alt="test"><br><img src="/" alt="test"><br><img src="/" alt="test"><br><img src="/" alt="test"></p>
-]]></content>
-      <categories>
-        <category>geohistory</category>
-      </categories>
-      <tags>
-        <tag>古埃及</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>泛舟禅师塔</title>
     <url>/art/architecture/Pagoda-of-Zen-Master-Fanzhou/</url>
     <content><![CDATA[<p>泛舟禅师为唐朝宗室<br>泛舟禅师塔建于唐贞元九年（793年），长庆二年（822年）镌造墓铭。塔为单层砖塔，高10米，平面呈圆形，底部直径5.75米，由塔基、塔身、塔刹三部分组成。2013年至2014年，文物部门对其进行修缮</p>
@@ -119,6 +119,33 @@
         <tag>置顶</tag>
         <tag>中国古典建筑</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>音频</title>
+    <url>/tech/About-Audio/</url>
+    <content><![CDATA[<h1 id="bitrate-采样率-×-位深度-×-声道数"><a href="#bitrate-采样率-×-位深度-×-声道数" class="headerlink" title="bitrate = 采样率 × 位深度 × 声道数"></a><code>bitrate = 采样率 × 位深度 × 声道数</code></h1><p>   * bitrate&#x2F;比特率： &#x2F;bps 每秒传输的比特数 - 音频的空间分辨率 (128 kbps)<br>   * <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/sampleRate">sampleRate</a>&#x2F;采样率： &#x2F;Hz:  频率范围 - 音频的时间分辨率（44.1kHz）<br>   *  bitDepth&#x2F;位深度: &#x2F;bit:<br>是指编码音频数据时每秒传输的比特数。它是衡量音频文件大小和音质的重要指标。比特率是由位深度、采样率和声道数共同决定的。</p>
+<h3 id="bitDepth（位深度）"><a href="#bitDepth（位深度）" class="headerlink" title="bitDepth（位深度）"></a>bitDepth（位深度）</h3><ul>
+<li><strong>定义</strong>：<code>bitDepth</code> 指的是音频采样的精度，也就是说每个音频样本用多少位（bit）来表示。位深度决定了可以表示的声音的<strong>动态范围</strong>（从最小值到最大值的范围），以及理论上的<strong>信噪比</strong>。常见的位深度有 16位、24位和32位。位深度越高，可以表示的声音细节越多，录制出的音质也就越好，但相应的数据量也越大。    </li>
+<li><strong>用途</strong>：位深度在数字音频采样和录制过程中非常重要。例如，CD音质通常是16位的，而专业音频制作可能使用24位或更高，以获取更大的动态范围和更细腻的音质。    </li>
+<li><strong>例子</strong>：假设你正在录制一段音乐，并希望保留更多的动态范围和细节，你可能会选择24位的位深度来进行录制。</li>
+</ul>
+<h1 id="振荡器"><a href="#振荡器" class="headerlink" title="振荡器"></a>振荡器</h1><p>产生特定频率和波形</p>
+<ul>
+<li>物理世界的振荡器：<ul>
+<li>基本原理是在一个放大电路中引入正反馈回路，使系统产生<a href="https://www.eefocus.com/baike/1572010.html">自激振荡</a>。当系统开始自行振荡时，回路中的振荡信号经过放大后再次进入回路，进而增强自己，从而使振荡信号不断放大直到达到一个稳定的状态。振荡器的工作频率取决于回路的特性和放大电路的增益。</li>
+<li><a href="https://www.eefocus.com/baike/512437.html">https://www.eefocus.com/baike/512437.html</a></li>
+</ul>
+</li>
+<li>WebAPI: audioContext的方法.createOscillator<ul>
+<li>[[WebAPI 音频#OscillatorNode]]</li>
+</ul>
+</li>
+</ul>
+<h1 id="Matroska-（mkv包装）"><a href="#Matroska-（mkv包装）" class="headerlink" title="Matroska （mkv包装）"></a>Matroska （mkv包装）</h1><p>官方文件<br><a href="https://www.matroska.org/technical/codec_specs.html">https://www.matroska.org/technical/codec_specs.html</a></p>
+]]></content>
+      <categories>
+        <category>tech</category>
+      </categories>
   </entry>
   <entry>
     <title>豫北古塔:百家岩寺塔</title>
@@ -163,33 +190,6 @@
         <tag>置顶</tag>
         <tag>中国古典建筑</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>音频</title>
-    <url>/tech/About-Audio/</url>
-    <content><![CDATA[<h1 id="bitrate-采样率-×-位深度-×-声道数"><a href="#bitrate-采样率-×-位深度-×-声道数" class="headerlink" title="bitrate = 采样率 × 位深度 × 声道数"></a><code>bitrate = 采样率 × 位深度 × 声道数</code></h1><p>   * bitrate&#x2F;比特率： &#x2F;bps 每秒传输的比特数 - 音频的空间分辨率 (128 kbps)<br>   * <a href="https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/sampleRate">sampleRate</a>&#x2F;采样率： &#x2F;Hz:  频率范围 - 音频的时间分辨率（44.1kHz）<br>   *  bitDepth&#x2F;位深度: &#x2F;bit:<br>是指编码音频数据时每秒传输的比特数。它是衡量音频文件大小和音质的重要指标。比特率是由位深度、采样率和声道数共同决定的。</p>
-<h3 id="bitDepth（位深度）"><a href="#bitDepth（位深度）" class="headerlink" title="bitDepth（位深度）"></a>bitDepth（位深度）</h3><ul>
-<li><strong>定义</strong>：<code>bitDepth</code> 指的是音频采样的精度，也就是说每个音频样本用多少位（bit）来表示。位深度决定了可以表示的声音的<strong>动态范围</strong>（从最小值到最大值的范围），以及理论上的<strong>信噪比</strong>。常见的位深度有 16位、24位和32位。位深度越高，可以表示的声音细节越多，录制出的音质也就越好，但相应的数据量也越大。    </li>
-<li><strong>用途</strong>：位深度在数字音频采样和录制过程中非常重要。例如，CD音质通常是16位的，而专业音频制作可能使用24位或更高，以获取更大的动态范围和更细腻的音质。    </li>
-<li><strong>例子</strong>：假设你正在录制一段音乐，并希望保留更多的动态范围和细节，你可能会选择24位的位深度来进行录制。</li>
-</ul>
-<h1 id="振荡器"><a href="#振荡器" class="headerlink" title="振荡器"></a>振荡器</h1><p>产生特定频率和波形</p>
-<ul>
-<li>物理世界的振荡器：<ul>
-<li>基本原理是在一个放大电路中引入正反馈回路，使系统产生<a href="https://www.eefocus.com/baike/1572010.html">自激振荡</a>。当系统开始自行振荡时，回路中的振荡信号经过放大后再次进入回路，进而增强自己，从而使振荡信号不断放大直到达到一个稳定的状态。振荡器的工作频率取决于回路的特性和放大电路的增益。</li>
-<li><a href="https://www.eefocus.com/baike/512437.html">https://www.eefocus.com/baike/512437.html</a></li>
-</ul>
-</li>
-<li>WebAPI: audioContext的方法.createOscillator<ul>
-<li>[[WebAPI 音频#OscillatorNode]]</li>
-</ul>
-</li>
-</ul>
-<h1 id="Matroska-（mkv包装）"><a href="#Matroska-（mkv包装）" class="headerlink" title="Matroska （mkv包装）"></a>Matroska （mkv包装）</h1><p>官方文件<br><a href="https://www.matroska.org/technical/codec_specs.html">https://www.matroska.org/technical/codec_specs.html</a></p>
-]]></content>
-      <categories>
-        <category>tech</category>
-      </categories>
   </entry>
   <entry>
     <title>纪年工具</title>

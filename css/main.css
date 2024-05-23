@@ -1197,7 +1197,7 @@ mark.search-keyword {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #7dcf04;
+  background: #a34bde;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2476,7 +2476,7 @@ ul.breadcrumb li:last-child {
   z-index: 10;
 }
 .modal#home_map__modal .modal__dimmer {
-  background: rgba(0,0,0,0.8);
+  background: #000;
   z-index: 9;
 }
 .modal#home_map__modal .modal__content {
@@ -2504,7 +2504,6 @@ ul.breadcrumb li:last-child {
   letter-spacing: -0.02em;
   color: #000;
   margin-bottom: 20px;
-  z-index: 10;
 }
 .modal#home_map__modal .homepage__icon a {
   transform: scale(0.75);
@@ -3264,6 +3263,9 @@ body.home {
 .homepage__cover-wrapper .bottom img {
   transform: scaleX(1.001);
 }
+.homepage__title {
+  z-index: 11;
+}
 .home .homepage__title {
   position: absolute;
   top: -4vw;
@@ -3303,6 +3305,9 @@ body.home {
   display: flex;
   flex-direction: column;
 }
+.homepage__background img {
+  transform: scale(0.9);
+}
 .homepage__icon {
   display: flex;
   position: absolute;
@@ -3313,6 +3318,7 @@ body.home {
   display: flex;
   position: relative;
   width: 100%;
+  z-index: 10;
 /*#icon-film {
     top: 29.5vw;
     left: 78.5vw;
@@ -3360,28 +3366,28 @@ body.home {
   background: #ff8989;
 }
 .homepage__icon .icons #icon-board-1 {
-  top: 45%;
-  left: 12%;
+  top: 49%;
+  left: 16%;
 }
 .homepage__icon .icons #icon-board-2 {
-  top: 14.5%;
-  left: 31%;
+  top: 17%;
+  left: 33%;
   rotate: -10deg;
 }
 .homepage__icon .icons #icon-board-3 {
-  top: 24.3%;
-  left: 92%;
+  top: 26%;
+  left: 90%;
 }
 .homepage__icon .icons #icon-board-3 .title {
   left: -8.5vw;
 }
 .homepage__icon .icons #icon-factory {
-  top: 61.2%;
-  left: 18%;
+  top: 66%;
+  left: 21%;
 }
 .homepage__icon .icons #icon-house-1 {
-  top: 32.5%;
-  left: 47%;
+  top: 44%;
+  left: 49%;
   width: 3vw;
 }
 .homepage__icon .icons #icon-house-1 .title {
@@ -3389,15 +3395,15 @@ body.home {
   left: -1.5vw;
 }
 .homepage__icon .icons #icon-house-2 {
-  top: 41.5%;
+  top: 47%;
   left: 40%;
 }
 .homepage__icon .icons #icon-house-2 .title {
   top: 5vw;
 }
 .homepage__icon .icons #icon-boat {
-  top: 63.4%;
-  left: 48%;
+  top: 67%;
+  left: 49%;
   width: 6vw;
 }
 .homepage__icon .icons #icon-boat .title {
@@ -3406,8 +3412,8 @@ body.home {
   rotate: -9deg;
 }
 .homepage__icon .icons #icon-camera {
-  top: 37.8%;
-  left: 83%;
+  top: 39%;
+  left: 81%;
   width: 4vw;
 }
 .homepage__icon .icons #icon-camera .title {
@@ -3423,8 +3429,8 @@ body.home {
   left: 0.5vw;
 }
 .homepage__icon .icons #icon-stone-head {
-  top: 45%;
-  left: 88%;
+  top: 49%;
+  left: 86%;
   width: 4vw;
 }
 .homepage__icon .icons #icon-stone-head .title {
@@ -3432,8 +3438,8 @@ body.home {
   left: 1vw;
 }
 .homepage__icon .icons #icon-tree {
-  top: 7%;
-  left: 61%;
+  top: 9%;
+  left: 60%;
   width: 4vw;
 }
 .homepage__icon .icons #icon-tree .title {
