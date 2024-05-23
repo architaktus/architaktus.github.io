@@ -1197,7 +1197,7 @@ mark.search-keyword {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #a34bde;
+  background: #ff498a;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2513,6 +2513,9 @@ ul.breadcrumb li:last-child {
     transform: scale(0.6);
   }
 }
+.modal#home_map__modal .bottom img {
+  margin-bottom: -2px;
+}
 .use-motion .animated {
   animation-fill-mode: none;
   visibility: inherit;
@@ -3522,6 +3525,35 @@ body.home {
 }
 .error .footer a.top-post__link:hover {
   color: #999;
+}
+.main-inner.about {
+  padding: 0;
+  background: #f5deb3;
+}
+.about .header .meta {
+  color: #999;
+  margin-top: -5px;
+}
+.about .content_block {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .about .content_block {
+    width: 600px;
+  }
+}
+@media (min-width: 1600px) {
+  .about .content_block {
+    width: 720px;
+  }
+}
+.about .content_block .content {
+  margin-top: 40px;
 }
 .tags .page__body {
   background-color: #000;

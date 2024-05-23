@@ -55,7 +55,7 @@ NexT.boot.registerEvents = function() {
     function closeMap() {
       modalMap.style.display = 'none';
     }
-    siteLogo.addEventListener('click', showMap);
+    siteLogo.addEventListener('click', showMap); //TODO toggle才对
     mapDimmer.addEventListener('click', closeMap);
 
   //和
