@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"architaktus.github.io","root":"/","images":"/images","darkmode":false,"version":"0.10.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"architaktus.github.io","root":"/","images":"/images","darkmode":false,"version":"0.11.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="categories">
@@ -66,15 +66,20 @@
   <div class="navigation">
     
     
+    
 
 <nav class="navigation__menu">
   
-  <a class="navigation__menu__item site-logo" role="button" href="/">
+  
+  <div class="navigation__menu__item site-logo" id="siteLogo">
+  
     <span class="icon icon-logo">
       
       <img alt="" src="/images/logo.svg">
     </span>
-  </a>
+   
+  </div>
+  
 
   
   
@@ -196,39 +201,45 @@
                         
                         
                             
-                            <a class="sidebar-menu__item path" 
+                            <a class="item path" 
                                 role="button" href="/recent/" itemprop="url" title="Take a Trip!">
                                 Recent 
+                                <span class = "details">latest posts!</span>
                             </a>
                         
                             
-                            <a class="sidebar-menu__item path" 
+                            <a class="item path" 
                                 role="button" href="/categories/" itemprop="url" title="Dist. Articles">
                                 Themen 
+                                <span class = "details">all topics</span>
                             </a>
                         
                             
-                            <a class="sidebar-menu__item path" 
+                            <a class="item path" 
                                 role="button" href="/media/" itemprop="url" title="Dist. Portfolio">
                                 Media 
+                                <span class = "details">portfolio & gallery</span>
                             </a>
                         
                             
-                            <a class="sidebar-menu__item path" 
+                            <a class="item path" 
                                 role="button" href="/tools/" itemprop="url" title="Dist. Tools">
                                 Tools 
+                                <span class = "details">for now: 纪年转换</span>
                             </a>
                         
                             
-                            <a class="sidebar-menu__item path" 
+                            <a class="item path" 
                                 role="button" href="/tags/" itemprop="url" title="">
                                 Tags 
+                                <span class = "details">tagclouds here</span>
                             </a>
                         
                             
-                            <a class="sidebar-menu__item path" 
+                            <a class="item path" 
                                 role="button" href="/archives/" itemprop="url" title="">
                                 Archives 
+                                <span class = "details">the feeling of time</span>
                             </a>
                         
                     </div>
@@ -270,25 +281,30 @@
 
 
 
-      
+  </div>
     
-      
+  
+    
 
 <div class="modal" id="home_map__modal">
     <div class="modal__content">
         
         
         <div class="homepage__cover-wrapper">	
-            <div class="homepage__cover">
-                <div class="homepage-title">
-                    Architaktus
-                </div>
-                <div class="homepage-map icon">
-                    
-                    
-                    
-                        
-                            
+		<div class="homepage__cover">
+			
+				<div class="homepage__title">
+					<a href="/">Architaktus</a>
+				</div>
+			
+
+			<div class="homepage__icon">
+				<div class="icons">
+					
+					
+					
+						
+							
     <a class="icon-wrapper no-underline"
         id="icon-boat" 
         title="Recent" 
@@ -300,11 +316,11 @@
         			
     </a>
 					
-                        	
-                        
-                    
-                        
-                            
+							
+						
+					
+						
+							
     <a class="icon-wrapper no-underline"
         id="icon-board-2" 
         title="Themen" 
@@ -316,10 +332,10 @@
         			
     </a>
 					
-                        	
-                        
-                            
-                                
+							
+						
+							
+								
     <a class="icon-wrapper no-underline"
         id="icon-house-1" 
         title="Architecture" 
@@ -331,8 +347,8 @@
         			
     </a>
 
-                            
-                                
+							
+								
     <a class="icon-wrapper no-underline"
         id="icon-house-2" 
         title="City Records" 
@@ -344,8 +360,8 @@
         			
     </a>
 
-                            
-                                
+							
+								
     <a class="icon-wrapper no-underline"
         id="icon-film" 
         title="Reviews" 
@@ -357,8 +373,8 @@
         			
     </a>
 
-                            
-                                
+							
+								
     <a class="icon-wrapper no-underline"
         id="icon-tree" 
         title="Garden" 
@@ -370,11 +386,11 @@
         			
     </a>
 
-                            
-                        
-                    
-                        
-                            
+							
+						
+					
+						
+							
     <a class="icon-wrapper no-underline"
         id="icon-board-3" 
         title="Media" 
@@ -386,10 +402,10 @@
         			
     </a>
 					
-                        	
-                        
-                            
-                                
+							
+						
+							
+								
     <a class="icon-wrapper no-underline"
         id="icon-stone-head" 
         title="Portfolio" 
@@ -401,8 +417,8 @@
         			
     </a>
 
-                            
-                                
+							
+								
     <a class="icon-wrapper no-underline"
         id="icon-camera" 
         title="Gallery" 
@@ -414,11 +430,11 @@
         			
     </a>
 
-                            
-                        
-                    
-                        
-                            
+							
+						
+					
+						
+							
     <a class="icon-wrapper no-underline"
         id="icon-board-1" 
         title="Tools" 
@@ -430,10 +446,10 @@
         			
     </a>
 					
-                        	
-                        
-                            
-                                
+							
+						
+							
+								
     <a class="icon-wrapper no-underline"
         id="icon-factory" 
         title="Calender Converter" 
@@ -445,29 +461,32 @@
         			
     </a>
 
-                            
-                        
-                    
-                        	
-                        
-                    
-                        	
-                        
-                    
-                </div>
-                <div class="homepage-map background image">
-                    <img class="map"  src="/assets/home/Homepage_Map.svg">
-                    <span class="title"></span>
-                </div>
+							
+						
+					
+							
+						
+					
+							
+						
+					
+				</div>
+			</div>
+			<div class="homepage__background image">
+				<img class="map"  src="/assets/home/Homepage_Map.svg">
+			</div>
 
-            </div>
-        </div>
+		</div>
+		<span class="bottom">
+			<img class="map"  src="/assets/home/Homepage_Map_bottom.svg">
+		</span>
+	</div>
     </div>
+    <div class="modal__dimmer"></div>
 </div>
 
 
-    
-  </div>
+  
 
   <main class="main">
     

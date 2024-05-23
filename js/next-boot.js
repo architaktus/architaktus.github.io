@@ -41,6 +41,23 @@ NexT.boot.registerEvents = function() {
     NexT.utils.registerCodeblock(e.target);
   });
 
+
+  /**
+   * homepage modal相关
+   */
+    const siteLogo = document.getElementById('siteLogo');
+    const modalMap = document.getElementById('home_map__modal');
+    const mapDimmer = modalMap.querySelector('.modal__dimmer');
+    function showMap() {
+      modalMap.style.display = 'flex';
+      //TODO找到当前页面所在位置，画圈圈
+    }
+    function closeMap() {
+      modalMap.style.display = 'none';
+    }
+    siteLogo.addEventListener('click', showMap);
+    mapDimmer.addEventListener('click', closeMap);
+
   //和
   /**
    * gallery modal相关
@@ -132,6 +149,7 @@ NexT.boot.registerEvents = function() {
   closeBtn.addEventListener('click', closeModal);
   prevBtn.addEventListener('click', showPrev);
   nextBtn.addEventListener('click', showNext);
+
 };
 
 NexT.boot.refresh = function() {
